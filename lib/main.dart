@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uber_eat/features/auth/presentation/view/login_view.dart';
 import 'package:uber_eat/features/splash/presentation/view/splash_view.dart';
 
 void main() {
@@ -14,13 +15,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Uber Eats',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        splashColor: Colors.transparent,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+        primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
+        fontFamily: 'ReadexPro',
       ),
       initialRoute: SplashView.routeName,
       routes: {
         SplashView.routeName: (context) => SplashView(),
+        LoginView.routeName: (context) => LoginView(),
       },
     );
   }
