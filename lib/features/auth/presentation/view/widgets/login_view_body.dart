@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iconly/iconly.dart';
+import 'package:uber_eat/core/utils/animation_nav.dart';
 import 'package:uber_eat/core/utils/app_color.dart';
-import 'package:uber_eat/core/utils/app_styles.dart';
 import 'package:uber_eat/core/utils/custom_button.dart';
 import 'package:uber_eat/core/utils/custom_button_with_icon.dart';
 import 'package:uber_eat/core/widgets/custom_text_filed.dart';
+import 'package:uber_eat/features/auth/presentation/view/forgot_password_view.dart';
+import 'package:uber_eat/features/auth/presentation/view/sign_up_view.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -35,11 +37,17 @@ class LoginViewBody extends StatelessWidget {
             SizedBox(height: 16),
             Align(
               alignment: Alignment.centerRight,
-              child: Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  color: AppColor.kPrimaryColor900,
-                  fontSize: 16,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context, AnimationNav.createRoute(ForgotPasswordView()));
+                },
+                child: Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                    color: AppColor.kPrimaryColor900,
+                    fontSize: 16,
+                  ),
                 ),
               ),
             ),
@@ -59,7 +67,10 @@ class LoginViewBody extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context, AnimationNav.createRoute(SignUpView()));
+                  },
                   child: Text(
                     "Sign Up",
                     style: TextStyle(

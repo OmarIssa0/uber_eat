@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uber_eat/features/auth/presentation/view/forgot_password_view.dart';
 import 'package:uber_eat/features/auth/presentation/view/login_view.dart';
+import 'package:uber_eat/features/auth/presentation/view/sign_up_view.dart';
 import 'package:uber_eat/features/splash/presentation/view/splash_view.dart';
 
 void main() {
@@ -31,6 +33,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashView.routeName: (context) => SplashView(),
         LoginView.routeName: (context) => LoginView(),
+        SignUpView.routeName: (context) => SignUpView(),
+        ForgotPasswordView.routeName: (context) => ForgotPasswordView(),
       },
     );
   }
