@@ -22,6 +22,7 @@ class CustomTextFiled extends StatelessWidget {
     this.contentPadding,
     this.onChanged,
     this.suffixIcon,
+    this.fillColor,
   });
 
   final TextEditingController? controller;
@@ -41,6 +42,7 @@ class CustomTextFiled extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final void Function(String)? onChanged;
   final Widget? suffixIcon;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +63,7 @@ class CustomTextFiled extends StatelessWidget {
         // prefixStyle: const TextStyle(color: AppColor.kIconColor, fontSize: 14),
         // labelText: labelText,
         filled: true,
-        fillColor: AppColor.kCoolGrey50.withOpacity(.5),
+        fillColor: fillColor ?? AppColor.kCoolGrey50.withOpacity(.5),
         prefixIcon: prefix,
         hintText: title,
         labelStyle: const TextStyle(color: AppColor.kBlue200),

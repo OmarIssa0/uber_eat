@@ -6,11 +6,12 @@ class CustomButtonWithIcon extends StatelessWidget {
   const CustomButtonWithIcon({
     super.key,
     required this.icon,
-    required this.text,
+    required this.text, this.minimumSize,
   });
 
   final IconData icon;
   final String text;
+  final Size? minimumSize;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class CustomButtonWithIcon extends StatelessWidget {
         elevation: 1,
         foregroundColor: AppColor.kCoolGrey600,
         backgroundColor: AppColor.kWhite,
-        minimumSize: Size(double.infinity, 56),
+        minimumSize: minimumSize ?? Size(double.infinity, 56),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
