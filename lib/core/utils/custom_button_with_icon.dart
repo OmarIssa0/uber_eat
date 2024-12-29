@@ -6,12 +6,19 @@ class CustomButtonWithIcon extends StatelessWidget {
   const CustomButtonWithIcon({
     super.key,
     required this.icon,
-    required this.text, this.minimumSize,
+    required this.text,
+    this.minimumSize,
+    this.colorIcon,
+    this.colorText,
+    this.colorBackGround,
   });
 
   final IconData icon;
   final String text;
   final Size? minimumSize;
+  final Color? colorIcon;
+  final Color? colorText;
+  final Color? colorBackGround;
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +26,18 @@ class CustomButtonWithIcon extends StatelessWidget {
       onPressed: () {},
       icon: Icon(
         icon,
-        color: AppColor.kPrimaryColor800,
+        color: colorIcon ?? AppColor.kPrimaryColor800,
         size: 25,
       ),
       label: Text(
         text,
-        style: AppStyles.medium16.copyWith(color: AppColor.kCoolGrey600),
+        style: AppStyles.medium16
+            .copyWith(color: colorText ?? AppColor.kCoolGrey600),
       ),
       style: ElevatedButton.styleFrom(
         elevation: 1,
         foregroundColor: AppColor.kCoolGrey600,
-        backgroundColor: AppColor.kWhite,
+        backgroundColor: colorBackGround ?? AppColor.kWhite,
         minimumSize: minimumSize ?? Size(double.infinity, 56),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),

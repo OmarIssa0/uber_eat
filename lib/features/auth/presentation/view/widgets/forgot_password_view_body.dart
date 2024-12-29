@@ -25,7 +25,10 @@ class ForgotPasswordViewBody extends StatelessWidget {
             CustomTextFiled(
                 title: "Email", textInputType: TextInputType.emailAddress),
             const SizedBox(height: 30),
-            CustomButton(text: "Send"),
+            CustomButton(
+              text: "Send",
+              onPressed: () {},
+            ),
           ],
         ),
       ),

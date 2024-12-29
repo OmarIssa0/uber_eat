@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'ReadexPro',
       ),
-      initialRoute: HomeView.routeName,
+      initialRoute: SplashView.routeName,
       routes: {
         SplashView.routeName: (context) => SplashView(),
         LoginView.routeName: (context) => LoginView(),

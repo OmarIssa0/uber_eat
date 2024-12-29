@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconly/iconly.dart';
+import 'package:uber_eat/core/utils/app_color.dart';
 import 'package:uber_eat/core/utils/app_image.dart';
 import 'package:uber_eat/core/utils/app_styles.dart';
 import 'package:uber_eat/core/utils/custom_button_with_icon.dart';
@@ -104,6 +105,10 @@ class HomeViewBody extends StatelessWidget {
                                       SizedBox(
                                         height: 40,
                                         child: CustomButtonWithIcon(
+                                          colorBackGround:
+                                              AppColor.kPrimaryColor900,
+                                          colorIcon: AppColor.kWhite,
+                                          colorText: AppColor.kWhite,
                                           minimumSize: Size.zero,
                                           icon: IconlyLight.bag,
                                           text: "Order Now",
@@ -185,7 +190,7 @@ class HomeViewBody extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Popular Restaurants",
+                      "Available Promo",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -205,32 +210,62 @@ class HomeViewBody extends StatelessWidget {
               ),
               SizedBox(height: 16),
               SizedBox(
-                height: 200,
-                child: ListView.builder(
-                  itemCount: 5,
-                  scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: 150,
-                            decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Text("Restaurant"),
-                        ],
+                // height: 128,
+                // width: 264,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                    );
-                  },
+                    ),
+                    SizedBox(height: 8),
+                    Container(
+                      height: 32,
+                      width: 66,
+                      decoration: BoxDecoration(
+                        color: AppColor.kRose500,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        "35% off",
+                        style: AppStyles.regular12
+                            .copyWith(color: AppColor.kWhite),
+                      ),
+                    )
+                  ],
                 ),
-              ),
+              )
+              // SizedBox(
+              //   height: 200,
+              //   child: ListView.builder(
+              //     itemCount: 5,
+              //     scrollDirection: Axis.horizontal,
+              //     physics: BouncingScrollPhysics(),
+              //     itemBuilder: (context, index) {
+              //       return Padding(
+              //         padding: const EdgeInsets.only(left: 16),
+              //         child: Column(
+              //           children: [
+              //             Container(
+              //               height: 150,
+              //               width: 150,
+              //               decoration: BoxDecoration(
+              //                 color: Colors.grey,
+              //                 borderRadius: BorderRadius.circular(10),
+              //               ),
+              //             ),
+              //             SizedBox(height: 8),
+              //             Text("Restaurant"),
+              //           ],
+              //         ),
+              //       );
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ],

@@ -37,6 +37,7 @@ class SignUpViewBody extends StatelessWidget {
             CheckBoxSignUpView(),
             SizedBox(height: 33),
             CustomButton(
+              onPressed: () {},
               text: "Sign Up",
             ),
             SizedBox(height: 26),
