@@ -8,7 +8,7 @@ import 'package:uber_eat/core/utils/custom_button_with_icon.dart';
 import 'package:uber_eat/core/widgets/custom_text_filed.dart';
 import 'package:uber_eat/features/auth/presentation/view/forgot_password_view.dart';
 import 'package:uber_eat/features/auth/presentation/view/sign_up_view.dart';
-import 'package:uber_eat/features/home/presentation/view/home_view.dart';
+import 'package:uber_eat/root_view.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -56,7 +56,7 @@ class LoginViewBody extends StatelessWidget {
             CustomButton(
               onPressed: () {
                 Navigator.pushReplacement(
-                    context, AnimationNav.createRoute(HomeView()));
+                    context, AnimationNav.createRoute(RootView()));
               },
               text: "Login",
             ),

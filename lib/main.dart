@@ -4,6 +4,7 @@ import 'package:uber_eat/features/auth/presentation/view/login_view.dart';
 import 'package:uber_eat/features/auth/presentation/view/sign_up_view.dart';
 import 'package:uber_eat/features/home/presentation/view/home_view.dart';
 import 'package:uber_eat/features/splash/presentation/view/splash_view.dart';
+import 'package:uber_eat/root_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         SignUpView.routeName: (context) => SignUpView(),
         ForgotPasswordView.routeName: (context) => ForgotPasswordView(),
         HomeView.routeName: (context) => HomeView(),
+        RootView.routeName: (context) => RootView(),
       },
     );
   }
